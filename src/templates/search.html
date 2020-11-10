@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+	<h1> Foogle Search </h1>
+	<form actions="" method="post">
+		<p>
+			{{form.search.label}}<br>
+			{{form.search}}
+		</p>
+
+		<p> {{ query }} </p>
+	</form>
+{% endblock %}
