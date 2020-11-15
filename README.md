@@ -7,8 +7,6 @@
 * Farhan Nur Hidayat Denira/13519071
 * Safiq Faray/13519145
 
-Asisten :
-
 ## General Info
 Search Engine dibuat dengan menggunakan Python 3 dan Flask.
 
@@ -22,10 +20,11 @@ Website dapat dibuka dengan melakukan langkah-langkah berikut ini:
 6. Aktifkan virtual environment, pada laptop windows ketik ".\env\Scripts\activate", untuk OS lain dapat dilihat pada link di langkah 2.
 7. Install flask dengan command "pip install flask", cara lengkap dapat dilihat di https://pypi.org/project/Flask/ .
 8. Install flask_wtf dengan command "pip install flask_wtf", cara lengkap dapat dilihat di https://flask-wtf.readthedocs.io/en/stable/install.html
-9. Change directory ke folder src, dengan command "cd src".
-10. Lakukan export, untuk cmd ketik "set FLASK_APP=main.py", sedangkan untuk UNIX shells, ketik "export FLASK_APP=main.py".
-11. Run program dengan command "flask run".
-12. Apabila tidak ada error, maka link website lokal dapat dilihat, copy link tersebut ke browser dan search engine akan muncul.
+9. Install nltk dan bs4 dengan command "pip install nltk" dan "pip install bs4".
+10. Change directory ke folder src, dengan command "cd src".
+11. Lakukan export, untuk cmd ketik "set FLASK_APP=main.py", sedangkan untuk UNIX shells, ketik "export FLASK_APP=main.py".
+12. Run program dengan command "flask run".
+13. Apabila tidak ada error, maka link website lokal dapat dilihat, copy link tersebut ke browser dan search engine akan muncul. NOTE : apabila muncul error "ModuleNotFoundError", maka module yang belum ada dapat diinstall dengan command "pip install module-name".
 
 ## Using
 1. Upload satu atau bebarapa file html yang sudah disediakan dengan menggunakan tombol upload.
