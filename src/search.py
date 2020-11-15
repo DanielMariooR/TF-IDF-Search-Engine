@@ -8,16 +8,19 @@ from bs4 import BeautifulSoup
 import os
 import math
 
-def cosine_similiarity(vector1,vector2,vector3):
+def cosine_similarity(qvector,tqvector,tvector):
 #{Menghitung cosine similarity dari 2 buah vector}
-    n = len(vector1)
+#{qvector adalah vector query}
+#{tvector adalah vector teks dokumen/artikel berdasarkan teks library}
+#{tqvector adalah vector teks berdasarkan library query}
+    n = len(qvector)
     result = 0
     for i in range(n):
-        result += (vector1[i]*vector2[i])
-    if(magnitude(vector1)==0 or magnitude(vector3)==0):
+        result += (qvector[i]*tqvector[i])
+    if(magnitude(qvector)==0 or magnitude(tvector)==0):
         return 0
     else:
-        return (result/(magnitude(vector1)*magnitude(vector3)))
+        return (result/(magnitude(qvector)*magnitude(tvector)))
 
 def magnitude(vector):
 #{Menghitung besar sebuah vektor}
@@ -26,7 +29,6 @@ def magnitude(vector):
         magnitude += (elem ** 2)
     return math.sqrt(magnitude)
 
-query = "what is cloud computing?"
 
 def Preprocessing(text):
 #{Fungsi yang menerima text dan melakukan stemming serta stop word removal}
@@ -65,6 +67,7 @@ def Vectorizer(querylib,bag_of_words):
                 vector[i] += 1
     return vector
 
+#{Parsing Dokumen HTML}
 def HtmlParser(soup):
     text = soup.find_all('p')
     for i in range(len(text)):
@@ -90,5 +93,6 @@ def Wcounter(text):
     return len(token)
 
 def getFirstSen(text):
+#{Mengembalikan kalimat pertama dokumen/artikel}
     firstSen = text.partition('.')[0] + '.'
     return firstSen

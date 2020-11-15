@@ -2,7 +2,7 @@ import os
 import glob
 from flask import Flask, render_template, flash, redirect, request,session
 from werkzeug.utils import secure_filename
-from search import cosine_similiarity, HtmlParser, HtmlTitleParse, Preprocessing
+from search import cosine_similarity, HtmlParser, HtmlTitleParse, Preprocessing
 from search import Querylib, Vectorizer,Sort, Wcounter, getFirstSen
 from bs4 import BeautifulSoup
 
@@ -39,7 +39,10 @@ def home():
 @app.route('/about')
 def about():
 	return render_template('about.html')
-	
+
+@app.route('/uploads')
+def upload_form():
+	return render_template('upload.html')
 
 #Route untuk melakukan upload multiple file
 @app.route('/uploads', methods=['POST'])
@@ -54,7 +57,7 @@ def upload_file():
 
 		for file in files:
 			if file and allowed_file(file.filename):
-				filename = secure_filename(file.filename)
+				filename = file.filename
 				file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
 		flash('File(s) successfully uploaded')
@@ -94,7 +97,7 @@ def search_result():
 					textlib = Querylib(text_processed)
 					tqvector = Vectorizer(querylib,text_processed)
 					tvector = Vectorizer(textlib,text_processed)
-					sim = cosine_similiarity(qvector,tqvector,tvector)
+					sim = cosine_similarity(qvector,tqvector,tvector)
 					numofwords = Wcounter(text)
 					link = title + '.html'
 					first_sentence = getFirstSen(text)
