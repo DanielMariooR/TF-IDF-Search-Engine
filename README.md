@@ -7,8 +7,6 @@
 * Farhan Nur Hidayat Denira/13519071
 * Safiq Faray/13519145
 
-Asisten :
-
 ## General Info
 Search Engine dibuat dengan menggunakan Python 3 dan Flask.
 
@@ -26,7 +24,7 @@ Website dapat dibuka dengan melakukan langkah-langkah berikut ini:
 10. Change directory ke folder src, dengan command "cd src".
 11. Lakukan export, untuk cmd ketik "set FLASK_APP=main.py", sedangkan untuk UNIX shells, ketik "export FLASK_APP=main.py".
 12. Run program dengan command "flask run".
-13. Apabila tidak ada error, maka link website lokal dapat dilihat, copy link tersebut ke browser dan search engine akan muncul. NOTE : apabila muncul error "module tertentu not found", maka module dapat diinstall dengan command "pip install module-name".
+13. Apabila tidak ada error, maka link website lokal dapat dilihat, copy link tersebut ke browser dan search engine akan muncul. NOTE : apabila muncul error "ModuleNotFoundError", maka module yang belum ada dapat diinstall dengan command "pip install module-name".
 
 ## Using
 1. Upload satu atau bebarapa file html yang sudah disediakan dengan menggunakan tombol upload.
