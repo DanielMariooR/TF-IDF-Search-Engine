@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>tubes algeo 2</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/fonts/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/Article-Clean.css')}} ">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/Article-List.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/Navigation-Clean.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/Navigation-with-Search.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/styles.css')}}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top shadow-sm navigation-clean">
+        <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a href="#"><img src="{{url_for('static',filename='assets/img/logo.png')}}" width="100"></a>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#"></a></li>
+                    <li class="nav-item" role="presentation" id="nav-button-active"><a class="nav-link" id="nav-button-active" href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div data-aos="fade-up" id="profile" class="article-list">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center pulse animated">About Us</h2>
+            </div>
+            <div class="row articles">
+                <div class="col-sm-6 col-md-4 item"><img src="{{url_for('static',filename='assets/img/daniel.png')}}"><a href="#"></a>
+                    <h3 class="name">Daniel Mario Reynaldi/13519031<br></h3>
+                    <p class="description">Back-end</p>
+                </div>
+                <div class="col-sm-6 col-md-4 item"><img src="{{url_for('static',filename='assets/img/farhan.png')}}"><a href="#"></a>
+                    <h3 class="name">Farhan Nur Hidayat Denira/13519071<br></h3>
+                    <p class="description">Back-end</p><a class="action" href="#"></a></div>
+                <div class="col-sm-6 col-md-4 item"><img src="{{url_for('static',filename='assets/img/syafiq.png')}}"><a href="#"></a>
+                    <h3 class="name">Safiq Faray/13519145</h3>
+                    <p class="description">Front-end</p><a class="action" href="#"></a></div>
+            </div>
+        </div>
+    </div>
+    <div data-aos="fade-up" id="about-info" class="article-clean">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                    <div class="intro">
+                        <h1 class="text-center">Konsep Singkat <em>Search Engine </em>Yang Dibuat</h1>
+                    </div>
+                    <div class="text">
+                        <p><br>Search engine akan menerima input dari pengguna, yaitu Search query dan beberapa dokumen, dimana search engine akan melakukan pencarian search query pada dokumen-dokumen tersebut. Setelah menerima input search engine akan menampilkan
+                            hasil pencarian yang diurutkan berdasarkan tingkat kemiripan, mulai dari dokumen dengan tingkat kemiripan tertinggi.<br><br></p>
+                        <p><br>Pada halaman pencarian, pengguna dapat menekan judul dokumen yang diinginkan, lalu program akan mengarahkan pengguna pada sebuah halaman yang berisi full-text terkait dokumen tersebut. Halaman pencarian juga menampilkan tabel
+                            kata dan kemunculan dari setiap dokumen.<br></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-aos="fade-up" id="about-info" class="article-clean">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                    <div class="text-center intro">
+                        <h1 class="text-center"><em>How To Use</em></h1><img class="shadow" src="{{url_for('static',filename='assets/img/frontpage.png')}}" style="width: 90%;"></div>
+                    <div class="text">
+                        <p>Saat memasuki halaman utama, pengguna tinggal memasukan kata kunci yang akan dicari. Setelah itu, tekan tombol "Foogle Search" atau tombol enter untuk mulai mencari dokumen yang sesuai.</p>
+                        <p>Untuk mengupload dokumen, tinggal menekan tombol "File(s) Upload", kemudian akan muncul pilihan untuk upload dokumen.</p>
+                        <h2>Search Results</h2>
+                        <p>Setelah proses penyocokan antara query search yang dimasukan dengan dokumen-dokumen yang disimpan, maka hasil pencarian akan ditampilkan pada halaman seperti gambar diatas. Pengurutan didasarkan pada tingkat kemiripan. Pada bagian
+                            bawah, juga terdapat tabel yang berisi term, query, dan kemiripannya pada setiap dokumen.</p>
+                        <figure></figure>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/bs-init.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="{{url_for('static', filename='assets/js/script.js')}}"></script>
+</body>
+
+</html>

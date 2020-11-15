@@ -9,6 +9,14 @@
 			{{form.search}}
 		</p>
 
-		<p> {{ query }} </p>
+		{% if query %}
+		<p> 
+			{{query}}
+		</p>
+		{% endif %}
 	</form>
 {% endblock %}
+
+
+
+<input class="form-control d-inline-block" type="text" id="search-text-input-nav" autofocus="">

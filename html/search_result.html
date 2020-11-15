@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>tubes algeo 2</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="font-family: arial;">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean" id="navbar">
+        <div class="container">
+            <div id="search-nav"><img class="d-inline" src="assets/img/logo.png" width="100">
+                <div class="d-inline-block">
+                    <form class="form-inline" id="form-nav"><input class="form-control d-inline-block" type="text" id="search-text-input-nav" autofocus=""><button class="btn btn-light" id="search-button-nav" type="submit"><i class="fa fa-search"></i></button></form>
+                </div>
+            </div>
+            <ul class="nav navbar-nav ml-auto" id="nav-buttons">
+                <li class="nav-item" role="presentation"></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="shadow-sm" id="little-buttons">
+        <div class="container"><a id="search-result-button-active" href="#"><i class="fa fa-search"></i>&nbsp;Result</a><a id="search-result-button-modal" href="#"><i class="fa fa-upload"></i>&nbsp;Upload</a><a id="search-result-button" href="#"><i class="fa fa-clock-o"></i>&nbsp;History</a></div>
+    </div>
+    <div id="search-result">
+        <div class="container">
+            {% for i in range(15)%}
+            <div id="result"><a id="heading-result" href="#">results[i][2]</a>
+                <p id="description-result">Jumlah kata : {{results[i][5]}}</p>
+                <p id="description-result">Tingkat kemiripan : {{results[i][0] * 100}}%</p>
+                <p id="description-result">{{results[i][3]}}<br></p>
+            </div>
+            {% endfor %}
+            <div class="table-responsive" id="table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Term</th>
+                            <th>Query</th>
+                            <th>D1</th>
+                            <th>D2</th>
+                            <th>D3</th>
+                            <th>D4</th>
+                            <th>D5</th>
+                            <th>D6</th>
+                            <th>D7</th>
+                            <th>D8</th>
+                            <th>D9</th>
+                            <th>D10</th>
+                            <th>D11</th>
+                            <th>D12</th>
+                            <th>D13</th>
+                            <th>D14</th>
+                            <th>D15</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Term 1</td>
+                            <td>Query 1</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>Term 2</td>
+                            <td>Query 2</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>Term 3</td>
+                            <td>Query 3</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">File Upload</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>Select file(s) to upload</p>
+                    <form><input type="file">
+                        <div class="modal-footer" id="footer"><button class="btn btn-primary" type="submit">Upload</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
