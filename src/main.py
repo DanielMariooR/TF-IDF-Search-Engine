@@ -40,9 +40,6 @@ def home():
 def about():
 	return render_template('about.html')
 
-@app.route('/uploads')
-def upload_form():
-	return render_template('upload.html')
 
 #Route untuk melakukan upload multiple file
 @app.route('/uploads', methods=['POST'])
