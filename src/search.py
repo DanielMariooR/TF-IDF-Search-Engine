@@ -8,6 +8,9 @@ from bs4 import BeautifulSoup
 import os
 import math
 
+nltk.download('stopwords')
+nltk.download('punkt')
+
 def cosine_similarity(qvector,tqvector,tvector):
 #{Menghitung cosine similarity dari 2 buah vector}
 #{qvector adalah vector query}

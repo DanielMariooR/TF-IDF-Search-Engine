@@ -102,5 +102,6 @@ def search_result():
 					results.append(res)
 
 				Sort(results)  #Diurutkan berdasarkan tingkat kemiripan paling besar ke paling kecil
-	return render_template('search_result.html', query=query, results=results, query_term=query_term, querylib=querylib,qvector=qvector)
+				len_result = len(results)
+	return render_template('search_result.html', query=query, results=results, query_term=query_term, querylib=querylib,qvector=qvector,len_result=len_result)
 

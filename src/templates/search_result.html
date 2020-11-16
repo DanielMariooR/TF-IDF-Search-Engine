@@ -35,9 +35,10 @@
         <div class="container"><a id="search-result-button-active" href="#"><i class="fa fa-search"></i>&nbsp;Result</a><a id="search-result-button-modal" href="#"><i class="fa fa-upload"></i>&nbsp;Upload</a><a id="search-result-button" href="#"><i class="fa fa-clock-o"></i>&nbsp;History</a></div>
     </div>
     {% if query %}
+        {% if len_result != 0 %}
         <div id="search-result">
             <div class="container">
-                {% for i in range(15)%}
+                {% for i in range(len_result)%}
                 <div id="result"><a id="heading-result" href="{{url_for('static', filename=results[i][4])}}">{{results[i][2]}}</a>
                     <p id="description-result">Jumlah kata : {{results[i][5]}}</p>
                     <p id="description-result">Tingkat kemiripan : {{results[i][0] * 100}}%</p>
@@ -50,21 +51,9 @@
                             <tr>
                                 <th>Term</th>
                                 <th>Query</th>
-                                <th>D1</th>
-                                <th>D2</th>
-                                <th>D3</th>
-                                <th>D4</th>
-                                <th>D5</th>
-                                <th>D6</th>
-                                <th>D7</th>
-                                <th>D8</th>
-                                <th>D9</th>
-                                <th>D10</th>
-                                <th>D11</th>
-                                <th>D12</th>
-                                <th>D13</th>
-                                <th>D14</th>
-                                <th>D15</th>
+                                {% for i in range(len_result) %}
+                                <th>D{{i+1}}</th>
+                                {% endfor %}
                             </tr>
                         </thead>
                         <tbody>
@@ -72,7 +61,7 @@
                                 <tr>
                                     <td>{{querylib[i]}}</td>
                                     <td>{{qvector[i]}}</td>
-                                    {% for j in range(15)%}
+                                    {% for j in range(len_result)%}
                                         <td>{{results[j][1][i]}}</td>
                                     {% endfor %}
                                 </tr>
@@ -82,6 +71,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
     {% endif %}
     <div class="modal fade" role="dialog" tabindex="-1" id="modal">
         <div class="modal-dialog" role="document">
