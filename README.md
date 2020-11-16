@@ -28,8 +28,10 @@ Website dapat dibuka dengan melakukan langkah-langkah berikut ini:
 
 ## Using
 NOTE : wajib melakukan upload sebelum memasukkan search query
-1. Upload satu atau bebarapa file html yang sudah disediakan dengan menggunakan tombol upload.
+1. Upload satu atau bebarapa file html yang sudah disediakan dengan menggunakan tombol upload. Artikel harus dalam bahasa inggris.
 2. Format penamaan file adalah harus sebagai berikut "[title].html", title adalah elemen yang dibatasi tag <title> di file html, tanpa tanda "[]".
+      a. contoh: <title>Artikel virus corona</html>
+      b. Nama file: Artikel virus corona.html
 3. Masukkan keyword yang ingin dicari pada Search bar, lalu tekan tombol search.
 4. Akan muncul list laman website terurut berdasarkan kerelevanan antara website dan search query, serta Term Table.
 5. Pilih laman web yang ingin dibaca.
