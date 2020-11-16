@@ -27,6 +27,7 @@ Website dapat dibuka dengan melakukan langkah-langkah berikut ini:
 13. Apabila tidak ada error, maka link website lokal dapat dilihat, copy link tersebut ke browser dan search engine akan muncul. NOTE : apabila muncul error "ModuleNotFoundError", maka module yang belum ada dapat diinstall dengan command "pip install module-name".
 
 ## Using
+NOTE : wajib melakukan upload sebelum memasukkan search query
 1. Upload satu atau bebarapa file html yang sudah disediakan dengan menggunakan tombol upload.
 2. Format penamaan file adalah harus sebagai berikut "[title].html", title adalah elemen yang dibatasi tag <title> di file html, tanpa tanda "[]".
 3. Masukkan keyword yang ingin dicari pada Search bar, lalu tekan tombol search.
