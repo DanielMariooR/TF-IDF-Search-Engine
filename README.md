@@ -1,11 +1,5 @@
-# Algeo02-19031
 ## Website Search Engine sederhana
 > Website Search Engine sederhana mengenai Information Retrieval (IR) atau “Sistem Temu Balik Informasi” dengan model ruang vektor.
-
-## Anggota Kelompok
-* Daniel Mario Reynaldi/13519031
-* Farhan Nur Hidayat Denira/13519071
-* Safiq Faray/13519145
 
 ## General Info
 Search Engine dibuat dengan menggunakan Python 3 dan Flask.
